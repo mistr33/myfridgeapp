@@ -1,4 +1,7 @@
-@include('header')
+@extends('layouts.app')
+
+@section('content')
+
     <h1>Product create</h1>
     
     @if ($errors->any())
@@ -50,4 +53,4 @@
         
         <div class="form-group"><input type="submit" value="create"  class="btn btn-primary"></div>
     </form>
-    @include('footer')
+    @endsection

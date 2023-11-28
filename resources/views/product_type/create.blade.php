@@ -1,4 +1,7 @@
-@include('header')
+@extends('layouts.app')
+
+@section('content')
+
     <h1>Product type</h1>
     create
     <a href="{{route('product_type.index')}}">Go back</a>
@@ -19,4 +22,4 @@
         <div><label>Интервал проверки</label><input name="interval" class="@error('interval') is-invalid @endif "/></div>
         <div><input type="submit" value="create"></div>
     </form>
-    @include('footer')
+@endsection

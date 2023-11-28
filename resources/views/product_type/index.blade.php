@@ -1,11 +1,16 @@
-@include('header')
+@extends('layouts.app')
+
+@section('content')
     <h1>product types</h1>
     index
     @if(session()->has('succ'))
         {{session('succ')}}
     @endif
-    <a href="{{route('product_type.create')}}">Add more</a>
-    <table border=1>
+    <div class="row">
+        <a href="{{route('product_type.create')}}"><input type=button class="btn btn-primary" value="Add more"></a>
+    </div>
+    <div class="row">
+    <table border=1 class="table">
         <tr>
             <th>id</th>
             <th>type_title</th>
@@ -29,4 +34,5 @@
         </tr>
         @endforeach
     </table>
-    @include('footer')
+</div>
+    @endsection

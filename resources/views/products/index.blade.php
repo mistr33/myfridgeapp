@@ -1,13 +1,18 @@
-@include('header')
+@extends('layouts.app')
+
+@section('content')
+
     <h1>product</h1>
     index
     @if(session()->has('succ'))
         {{session('succ')}}
     @endif
+<div class="row">
+    <a href="{{route('product.create')}}"><input type=button class="btn btn-primary" value="Add more"></a>
+</div>
 
-    <a href="{{route('product.create')}}">Add more</a>
-
-    <table border=1>
+<div class="row">
+    <table border=1 class="table">
         <tr>
             <th>id</th>
             <th>title</th>
@@ -37,4 +42,5 @@
         </tr>
         @endforeach
     </table>
-    @include('footer')
+</div>
+    @endsection

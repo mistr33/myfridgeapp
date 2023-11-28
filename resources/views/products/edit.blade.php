@@ -1,4 +1,6 @@
-@include('header')
+@extends('layouts.app')
+
+@section('content')
     <h1>Product</h1>
     edit
     @if ($errors->any())
@@ -58,4 +60,4 @@
 
         <div><input type="submit" value="update" class="btn btn-primary"></div>
     </form>
-    @include('footer')
+    @endsection

@@ -1,4 +1,7 @@
-@include('header')
+@extends('layouts.app')
+
+@section('content')
+
     <h1>Product type</h1>
     edit
     id={{$product_type->id}}
@@ -25,4 +28,4 @@
         </div>
         <div><input type="submit" value="update"></div>
     </form>
-    @include('footer')
+  @endsection
